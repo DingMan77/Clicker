@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clicker">
         <activity
+            android:name=".finishPage"
+            android:exported="false" />
+        <activity
+            android:name=".question4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".question3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".question2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".question1Activity"
+            android:exported="false" />
+        <activity
             android:name=".homeActivity"
             android:exported="true">
             <intent-filter>

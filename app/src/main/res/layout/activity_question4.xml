@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Q4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCF00"
+    tools:context=".question4Activity">
+
+    <Button
+        android:id="@+id/previous2"
+        android:layout_width="132dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/button2"
+        android:fontFamily="@font/sheilacrayon"
+        android:text="@string/finish"
+        android:textAlignment="center"
+        android:textColor="#1047a9"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sheilacrayon"
+        android:text="@string/q4_title"
+        android:textColor="#1047A9"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/q4text"
+        android:layout_width="413dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="92dp"
+        android:background="#FFE570"
+        android:fontFamily="@font/sheilacrayon"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp"
+        android:text="@string/q4"
+        android:textColor="#1047A9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="274dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="228dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/q4a"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q4a"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q4b"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q4b"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q4c"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q4c"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+
+        <RadioButton
+            android:id="@+id/q4d"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q4d"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Q1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCF00"
+    tools:context=".question1Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sheilacrayon"
+        android:text="@string/q1_title"
+        android:textColor="#1047A9"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/q1text"
+        android:layout_width="413dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="92dp"
+        android:background="#FFE570"
+        android:fontFamily="@font/sheilacrayon"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp"
+        android:text="@string/q1"
+        android:textColor="#1047A9"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="132dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/sheilacrayon"
+        android:text="@string/next"
+        android:textAlignment="center"
+        android:textColor="#1047a9"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="274dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="228dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/q1a"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q1a"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q1b"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q1b"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q1c"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q1c"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q1d"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q1d"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

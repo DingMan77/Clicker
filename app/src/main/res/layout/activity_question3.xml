@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Q3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCF00"
+    tools:context=".question3Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/sheilacrayon"
+        android:text="@string/q3_title"
+        android:textColor="#1047A9"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/q23text"
+        android:layout_width="272dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="92dp"
+        android:background="#FFE570"
+        android:fontFamily="@font/sheilacrayon"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp"
+        android:text="@string/q3"
+        android:textColor="#1047A9"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="132dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/sheilacrayon"
+        android:text="@string/next"
+        android:textAlignment="center"
+        android:textColor="#1047a9"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="274dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="228dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/q3a"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q3a"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q3b"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q3b"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q3c"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q3c"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/q3d"
+            android:layout_width="246dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/sheilacrayon"
+            android:text="@string/q3d"
+            android:textColor="@color/blue"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="164dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/q3picture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

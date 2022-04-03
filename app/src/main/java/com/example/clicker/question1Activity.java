@@ -17,6 +17,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
+import android.util.*;
 
 
 import cz.msebera.android.httpclient.Header;
@@ -55,44 +56,66 @@ public class question1Activity extends AppCompatActivity {
     }
 
     public void triggerURL() {
-       if(a.isChecked()){
-           try{
-               final String URL="http://192.168.1.100/Clicker/select1?choice=a";
+        if (a.isChecked()) {
+            new Thread(){
+                @Override
+                public void run() {
+                    networkRequest1();
+                }
+            }.start();
 
-               new Thread(new Runnable(){
-                   public void run(){
-                       try {
-
-//                                Log.d("MainActivity","Continue");
-                           URL url = new URL(URL);//生成一个URL实例，指向我们刚才设定的地址URL
-
-                                /*
-                                openConnection()方法只是创建了一个HttpURLConnection实例，
-                                   并不是真正连接，在连接之前可以设置一些属性
-                                 */
-                           HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-
-                           conn.setRequestMethod("POST"); //设置请求方式为post
-
-                           conn.setReadTimeout(5000);//设置超时信息
-                           conn.setConnectTimeout(5000);//设置超时信息
-
-                           conn.setDoInput(true);//设置输入流，允许输入
-                           conn.setDoOutput(true);//设置输出流，允许输出
-                           conn.setUseCaches(false);//设置POST请求方式不能够使用缓存
-                           conn.disconnect();
-                       } catch (IOException e) {
-                           e.printStackTrace();
-                       }
-
-                   }
-               }).start();
-           }catch (Exception e) {
-               e.printStackTrace();
-           }
-       }
-
+        }
     }
+
+    private void networkRequest1(){
+        HttpURLConnection connection=null;
+        try {
+            URL url = new URL("http://192.168.1.100/Clicker/select1?choice=a");
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(3000);
+            connection.setReadTimeout(3000);
+            //设置请求方式 GET / POST 一定要大小
+            connection.setRequestMethod("GET");
+            connection.setDoInput(true);
+            connection.setDoOutput(false);
+            connection.connect();
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                throw new IOException("HTTP error code" + responseCode);
+            }
+            String result = getStringByStream(connection.getInputStream());
+            if (result == null) {
+                Log.d("Fail", "失败了");
+            }else{
+                Log.d("succuss", "成功了 ");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String getStringByStream(InputStream inputStream){
+        Reader reader;
+        try {
+            reader=new InputStreamReader(inputStream,"UTF-8");
+            char[] rawBuffer=new char[512];
+            StringBuffer buffer=new StringBuffer();
+            int length;
+            while ((length=reader.read(rawBuffer))!=-1){
+                buffer.append(rawBuffer,0,length);
+            }
+            return buffer.toString();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+
 }
 
 

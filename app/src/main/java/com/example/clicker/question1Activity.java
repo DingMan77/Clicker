@@ -63,14 +63,40 @@ public class question1Activity extends AppCompatActivity {
                     networkRequest1();
                 }
             }.start();
+        }
 
+        if (b.isChecked()) {
+            new Thread(){
+                @Override
+                public void run() {
+                    networkRequest2();
+                }
+            }.start();
+        }
+
+        if (c.isChecked()) {
+            new Thread(){
+                @Override
+                public void run() {
+                    networkRequest3();
+                }
+            }.start();
+        }
+
+        if (d.isChecked()) {
+            new Thread(){
+                @Override
+                public void run() {
+                    networkRequest4();
+                }
+            }.start();
         }
     }
 
     private void networkRequest1(){
         HttpURLConnection connection=null;
         try {
-            URL url = new URL("http://192.168.1.100/Clicker/select1?choice=a");
+            URL url = new URL("http://192.168.1.100:9999/Clicker/select1?choice=a");
             connection = (HttpURLConnection) url.openConnection();
             connection.setConnectTimeout(3000);
             connection.setReadTimeout(3000);
@@ -94,6 +120,84 @@ public class question1Activity extends AppCompatActivity {
         }
     }
 
+    private void networkRequest2(){
+        HttpURLConnection connection=null;
+        try {
+            URL url = new URL("http://192.168.1.100:9999/Clicker/select1?choice=b");
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(3000);
+            connection.setReadTimeout(3000);
+            //设置请求方式 GET / POST 一定要大小
+            connection.setRequestMethod("GET");
+            connection.setDoInput(true);
+            connection.setDoOutput(false);
+            connection.connect();
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                throw new IOException("HTTP error code" + responseCode);
+            }
+            String result = getStringByStream(connection.getInputStream());
+            if (result == null) {
+                Log.d("Fail", "失败了");
+            }else{
+                Log.d("succuss", "成功了 ");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private void networkRequest3(){
+        HttpURLConnection connection=null;
+        try {
+            URL url = new URL("http://192.168.1.100:9999/Clicker/select1?choice=c");
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(3000);
+            connection.setReadTimeout(3000);
+            //设置请求方式 GET / POST 一定要大小
+            connection.setRequestMethod("GET");
+            connection.setDoInput(true);
+            connection.setDoOutput(false);
+            connection.connect();
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                throw new IOException("HTTP error code" + responseCode);
+            }
+            String result = getStringByStream(connection.getInputStream());
+            if (result == null) {
+                Log.d("Fail", "失败了");
+            }else{
+                Log.d("succuss", "成功了 ");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private void networkRequest4(){
+        HttpURLConnection connection=null;
+        try {
+            URL url = new URL("http://192.168.1.100:9999/Clicker/select1?choice=d");
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(3000);
+            connection.setReadTimeout(3000);
+            //设置请求方式 GET / POST 一定要大小
+            connection.setRequestMethod("GET");
+            connection.setDoInput(true);
+            connection.setDoOutput(false);
+            connection.connect();
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                throw new IOException("HTTP error code" + responseCode);
+            }
+            String result = getStringByStream(connection.getInputStream());
+            if (result == null) {
+                Log.d("Fail", "失败了");
+            }else{
+                Log.d("succuss", "成功了 ");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     private String getStringByStream(InputStream inputStream){
         Reader reader;
         try {

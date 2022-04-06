@@ -6,21 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import com.loopj.android.http.*;
-import java.net.*;
+
 import java.io.*;
-import android.net.*;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
 import android.util.*;
-
-
-import cz.msebera.android.httpclient.Header;
 
 
 public class question1Activity extends AppCompatActivity {
@@ -40,7 +32,7 @@ public class question1Activity extends AppCompatActivity {
         d = (RadioButton) findViewById(R.id.q1d);
 
 
-        button = (Button) findViewById(R.id.next2);
+        button = (Button) findViewById(R.id.login);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

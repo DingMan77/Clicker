@@ -14,6 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clicker"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".homeActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/network_security_config" />
@@ -34,7 +38,7 @@
             android:name=".question1Activity"
             android:exported="false" />
         <activity
-            android:name=".homeActivity"
+            android:name=".logInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

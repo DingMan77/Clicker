@@ -34,7 +34,7 @@ public class question2Activity extends AppCompatActivity {
         c = (RadioButton) findViewById(R.id.q2c);
         d = (RadioButton) findViewById(R.id.q2d);
 
-        button = (Button) findViewById(R.id.next2);
+        button = (Button) findViewById(R.id.login);
 
 
         button.setOnClickListener(new View.OnClickListener(){

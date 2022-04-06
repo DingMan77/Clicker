@@ -16,6 +16,18 @@ public class homeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        Intent intent2 = getIntent();
+        String message1 = intent2.getStringExtra(logInActivity.EXTRA_MESSAGE);
+
+        String message2 = intent2.getStringExtra(logInActivity.EXTRA_MESSAGE2);
+
+        TextView txtDisplay1 = (TextView) findViewById(R.id.displayName);
+        txtDisplay1.setText(message1);
+
+        TextView txtDisplay2 = (TextView) findViewById(R.id.displayNo);
+        txtDisplay2.setText(message2);
+
+
         button = (Button) findViewById(R.id.startButton);
         button.setOnClickListener(new View.OnClickListener(){
             @Override

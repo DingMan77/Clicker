@@ -3,6 +3,8 @@
     <string name="start_quiz">Let\'s do a quiz!</string>
     <string name="start_button">click to start</string>
 
+    <string name="log_in">Log in</string>
+
     <string name="q1_title">Question 1:</string>
     <string name="q2_title">Question 2:</string>
     <string name="q3_title">Question 3:</string>

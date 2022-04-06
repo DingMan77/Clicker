@@ -33,7 +33,7 @@ public class question3Activity extends AppCompatActivity {
         c = (RadioButton) findViewById(R.id.q3c);
         d = (RadioButton) findViewById(R.id.q3d);
 
-        button = (Button) findViewById(R.id.next2);
+        button = (Button) findViewById(R.id.login);
 
         button.setOnClickListener(new View.OnClickListener(){
             @Override

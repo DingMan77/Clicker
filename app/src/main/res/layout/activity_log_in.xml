@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="288dp"
         android:fontFamily="@font/sheilacrayon"
         android:text="Matriculation No.:"
         android:textColor="@color/blue"
@@ -57,7 +57,7 @@
         android:layout_width="289dp"
         android:layout_height="51dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="212dp"
         android:ems="10"
         android:fontFamily="@font/sheilacrayon"
         android:inputType="textPersonName"
@@ -73,7 +73,7 @@
         android:layout_width="204dp"
         android:layout_height="59dp"
         android:layout_marginStart="188dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="272dp"
         android:ems="10"
         android:fontFamily="@font/sheilacrayon"
         android:inputType="textPersonName"
@@ -89,12 +89,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="224dp"
         android:fontFamily="@font/sheilacrayon"
         android:text="Name: "
         android:textColor="@color/blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="356dp"
+        android:fontFamily="@font/sheilacrayon"
+        android:text="Email:"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="291dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="340dp"
+        android:ems="10"
+        android:fontFamily="@font/sheilacrayon"
+        android:inputType="textPersonName"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

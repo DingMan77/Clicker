@@ -20,6 +20,7 @@ public class logInActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.example.clicker.NAME";
     public final static String EXTRA_MESSAGE2 = "com.example.clicker.NO";
+    public final static String EXTRA_MESSAGE3= "com.example.clicker.EMAIL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,11 @@ public class logInActivity extends AppCompatActivity {
         EditText noInput = (EditText) findViewById(R.id.noInput);
         String message2 = noInput.getText().toString();
         intent.putExtra(EXTRA_MESSAGE2, message2);  // key-value pair
+
+        EditText emailInput = (EditText) findViewById(R.id.emailInput);
+        String message3 = noInput.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE3, message3);  // key-value pair
+
         // Start the intended activity
         startActivity(intent);
     }

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Clicker"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".signUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".homeActivity"
             android:exported="false" />
 
